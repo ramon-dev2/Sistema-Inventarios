@@ -2,6 +2,7 @@ package gm.inventarios.servicio;
 
 import gm.inventarios.modelo.Producto;
 import gm.inventarios.repositorio.ProductoRepositorio;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +12,7 @@ public class ProductoServicio implements IProductoServicio {
 
     private final ProductoRepositorio productoRepositorio;
 
+    @Autowired
     public ProductoServicio(ProductoRepositorio productoRepositorio) {
         this.productoRepositorio = productoRepositorio;
     }
