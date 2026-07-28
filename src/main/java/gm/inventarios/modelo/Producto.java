@@ -1,6 +1,5 @@
 package gm.inventarios.modelo;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,10 +13,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Producto {
+
     @Id
-            @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer idProducto;
-    String descripcion;
-    Double precio;
-    Integer existencia;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idProducto;
+    private String descripcion;
+    private Double precio;
+    private Integer existencia;
+    private Boolean activo = true;
 }

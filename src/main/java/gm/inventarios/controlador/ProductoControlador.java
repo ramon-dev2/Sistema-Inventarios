@@ -73,6 +73,9 @@ public class ProductoControlador {
         producto.setDescripcion(productoRecibido.getDescripcion());
         producto.setPrecio(productoRecibido.getPrecio());
         producto.setExistencia(productoRecibido.getExistencia());
+        if (productoRecibido.getActivo() != null) {
+            producto.setActivo(productoRecibido.getActivo());
+        }
 
         Producto productoActualizado = productoServicio.guardarProducto(producto);
         logger.info("Producto actualizado: {}", productoActualizado);
